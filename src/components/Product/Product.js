@@ -36,7 +36,6 @@ const Product = ({ name, title, colors, sizes, basePrice}) => {
                   <button type="button" className={clsx(currentSize === size && styles.active)} onClick={() => setCurrentSize(size)}>{size.name}</button>
                 </li>
               )}
-              <li><button type="button" className={styles.active}>S</button></li>
             </ul>
           </div>
           <div className={styles.colors}>
