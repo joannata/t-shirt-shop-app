@@ -1,4 +1,4 @@
-@import '../../styles/settings.scss';
+@import '../../../../../styles/settings.scss';
 
 .button {
     background: $color-success;
@@ -33,4 +33,14 @@
             color: darken($color-light, 20%);
         }
     }
+}
+
+.button {
+    position: absolute;
+    top: -$base-size * 2;
+    right: -$base-size * 2;
+    font-size: $base-size * 2;
+    border-radius: 100%;
+    width: $base-size * 5;
+    height: $base-size * 5;
 }
