@@ -21,7 +21,7 @@ const ProductForm = ({ addToCart, sizes, currentSize, setCurrentSize, colors, cu
 ProductForm.propTypes = {
     addToCart: PropTypes.func.isRequired,
     sizes: PropTypes.array.isRequired,
-    currentSize: PropTypes.string.isRequired,
+    currentSize: PropTypes.object.isRequired,
     setCurrentSize: PropTypes.func.isRequired,
     colors: PropTypes.array.isRequired,
     currentColor: PropTypes.string.isRequired,
