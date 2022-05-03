@@ -9,7 +9,7 @@ const Product = ({ name, title, colors, sizes, basePrice}) => {
   const [currentColor, setCurrentColor] = useState(colors[0]);
   const [currentSize, setCurrentSize] = useState(sizes[0]);
 
-  const getPrice = useMemo(() => {
+  const calculatedPrice = useMemo(() => {
     const addition = sizes.find((element) => element === currentSize).additionalPrice;
       return(basePrice + addition);
   }, [currentSize, basePrice, sizes]);
@@ -20,7 +20,7 @@ const Product = ({ name, title, colors, sizes, basePrice}) => {
     console.log('Summary');
     console.log('============');
     console.log('Name:', name);
-    console.log('Price:', getPrice);
+    console.log('Price:', calculatedPrice);
     console.log('Size:', currentSize);
     console.log('Color:', currentColor);
   }
@@ -31,7 +31,7 @@ const Product = ({ name, title, colors, sizes, basePrice}) => {
       <div>
         <header>
           <h2 className={styles.name}>{title}</h2>
-          <span className={styles.price}>Price: {getPrice}$</span>
+          <span className={styles.price}>Price: {calculatedPrice}$</span>
         </header>
         <ProductForm
           addToCart={addToCart}
